@@ -18,6 +18,7 @@ mount -o remount, rw /
 cd /home/
 echo "Current Dir $(basename "$PWD")"
 #clone the repo
+echo "Cloning from $repo"
 git clone $repo
 chmod +x RV_HealthMonitor
 
