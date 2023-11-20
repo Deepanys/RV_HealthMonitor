@@ -42,7 +42,7 @@ echo "SysLog Started"
 echo "                        |----SOC----|----PMIC----|----ARMFRQ----| ">$dir/$FileName
 while true
 do
-    echo "$(date +'%Y:%m:%d:%T') :: $(vcgencmd measure_temp) | $(vcgencmd measure_temp pmic) | $(vcgencmd measure_clock arm) ">>/home/TempCpuLogs/$FileName
+    echo "$(date +'%Y:%m:%d:%T') || $(vcgencmd measure_temp) | $(vcgencmd measure_temp pmic) | $(vcgencmd measure_clock arm) ">>/home/TempCpuLogs/$FileName
     sleep 60
 done
 
