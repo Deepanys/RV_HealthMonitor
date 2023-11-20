@@ -12,9 +12,15 @@ echo "SystemHealth logging script."
 #revoking permision
 mount -o remount, rw /
 
+
+
 #creating Datalog folder
 dir="/home/SystemHealthLog"
 
+FileName=$(date +'SysCharlog_%Y:%m:%d:%T.log')
+
+#Creating File using Date stamp in /home/CamAppLog/
+touch /home/TempCpuLogs/$FileName
 
 if [ -d $dir ]
 then
@@ -33,22 +39,13 @@ else
     fi
 fi
 
-
-FileName=$(date +'SysCharlog_%Y:%m:%d:%T.log')
-
-#Creating File using Date stamp in /home/CamAppLog/
-touch /home/TempCpuLogs/$FileName
-
 echo "SysLog Started"
 
 
-echo "                        |----SOC----|----PMIC----|----ARMFRQ----| ">/home/TempCpuLogs/$FileName
+echo "                        |----SOC----|----PMIC----|----ARMFRQ----| ">$dir/$FileName
 while true
 do
-    
     echo "$(date +'%Y:%m:%d:%T') :: $(vcgencmd measure_temp) | $(vcgencmd measure_temp pmic) | $(vcgencmd measure_clock arm) ">>/home/TempCpuLogs/$FileName
-    
-    #vcgencmd measure_temp pmic
     sleep 60
 done
 
