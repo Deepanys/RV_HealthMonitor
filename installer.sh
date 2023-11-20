@@ -43,7 +43,7 @@ else
 fi
 echo ""
 echo "Please REBOOT the Device to Complete installition"
-exit "Installition Success...."
+exit "Installition Success...." 0
 
 
 
