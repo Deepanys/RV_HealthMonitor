@@ -11,15 +11,12 @@
 echo "SystemHealth logging script."
 #revoking permision
 mount -o remount, rw /
-
-
-
 #creating Datalog folder
 dir="/home/SystemHealthLog"
 
 FileName=$(date +'SysCharlog_%Y:%m:%d:%T.log')
 
-#Creating File using Date stamp in /home/CamAppLog/
+#Creating File using Date stamp 
 touch /home/TempCpuLogs/$FileName
 
 if [ -d $dir ]
