@@ -31,7 +31,7 @@ if [ "$(basename "$PWD")" == "etc" ]; then
 	then
     	echo "Action script Found"
     	chmod +x SystemHealthLogger.sh
-    	echo "/etc/SystemHealthLogger.sh&">>/etc/startup.sh
+    	echo "bash /etc/SystemHealthLogger.sh&">>/etc/startup.sh
     	
 	else
     	echo "Cloning Error"
