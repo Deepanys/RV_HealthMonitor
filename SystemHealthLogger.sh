@@ -16,7 +16,7 @@ dir="/home/SystemHealthLog"
 
 FileName=$(date +'SysCharlog_%Y:%m:%d:%T.log')
 
-#Creating File using Date stamp 
+#Creating File using Date stamp in /home/CamAppLog/
 touch /home/TempCpuLogs/$FileName
 
 if [ -d $dir ]
@@ -42,7 +42,7 @@ echo "SysLog Started"
 echo "                        |----SOC----|----PMIC----|----ARMFRQ----| ">$dir/$FileName
 while true
 do
-    echo "$(date +'%Y:%m:%d:%T') || $(vcgencmd measure_temp) | $(vcgencmd measure_temp pmic) | $(vcgencmd measure_clock arm) ">>/home/TempCpuLogs/$FileName
+    echo "$(date +'%Y:%m:%d:%T') :: $(vcgencmd measure_temp) | $(vcgencmd measure_temp pmic) | $(vcgencmd measure_clock arm) ">>$dir/$FileName
     sleep 60
 done
 
