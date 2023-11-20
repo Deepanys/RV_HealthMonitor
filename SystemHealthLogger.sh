@@ -17,7 +17,7 @@ dir="/home/SystemHealthLog"
 FileName=$(date +'SysCharlog_%Y:%m:%d:%T.log')
 
 #Creating File using Date stamp in /home/CamAppLog/
-touch /home/TempCpuLogs/$FileName
+touch $dir/$FileName
 
 if [ -d $dir ]
 then
