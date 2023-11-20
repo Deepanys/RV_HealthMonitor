@@ -41,6 +41,9 @@ if [ "$(basename "$PWD")" == "etc" ]; then
 else
     echo "!!!..Move directory Error.."
 fi
+echo ""
+echo "Please REBOOT the Device to Complete installition"
+exit "Installition Success...."
 
 
 
