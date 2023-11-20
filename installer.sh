@@ -20,7 +20,7 @@ mount -o remount, rw /
 #Move to etc
 cd /etc/
 
-echo " Current Dir is $(basename "$PWD")"
+echo "Working in Dir $(basename "$PWD")"
 
 if [ "$(basename "$PWD")" == "etc" ]; then
     echo "Starting installation.."
@@ -29,7 +29,7 @@ if [ "$(basename "$PWD")" == "etc" ]; then
 
     if [ -f "/etc/SystemHealthLogger.sh" ]
 	then
-    	echo "Startup script Found"
+    	echo "Action script Found"
     	chmod +x SystemHealthLogger.sh
     	echo "/etc/SystemHealthLogger.sh&">>/etc/startup.sh
     	
