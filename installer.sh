@@ -22,7 +22,7 @@ cd /etc/
 
 echo "Working in Dir $(basename "$PWD")"
 
-if ["$(basename "$PWD")" == "etc"]; then
+if [ "$(basename "$PWD")" == "etc" ]; then
     echo "Starting installation.."
     curl -OL $repo
     echo "Cloning completed"
@@ -35,15 +35,16 @@ if ["$(basename "$PWD")" == "etc"]; then
     	
 	else
     	echo "Cloning Error"
-    	exit 1 
+    	exit 1 "Download Error!!!"
     	
 	fi
+    echo ""
+    echo "Please REBOOT the Device to Complete installition"
+    exit 0
 else
     echo "!!!..Move directory Error.."
 fi
-echo ""
-echo "Please REBOOT the Device to Complete installition"
-exit 0
+
 
 
 
