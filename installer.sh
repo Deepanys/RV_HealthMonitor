@@ -35,7 +35,7 @@ if [ "$(basename "$PWD")" == "etc" ]; then
     	
 	else
     	echo "Cloning Error"
-    	exit 1 "Download Error!!!"
+    	exit 1 
     	
 	fi
 else
