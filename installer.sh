@@ -25,7 +25,8 @@ echo "Working in Dir $(basename "$PWD")"
 if [ "$(basename "$PWD")" == "etc" ]
 then
     echo "Starting installation.."
-    curl -OL $repo
+    #    curl -OL $repo
+    wget $repo
     echo "Cloning completed"
 
     if [ -f "/etc/SystemHealthLogger.sh" ]
