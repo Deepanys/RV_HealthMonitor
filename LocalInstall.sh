@@ -25,7 +25,8 @@ cd /etc/
 
 echo "Working in Dir $(basename "$PWD")"
 
-if [ "$(basename "$PWD")" == "etc" ]
+#if [ "$(basename "$PWD")" == "etc" ]
+if [ true ]
 then
     echo "Starting installation.."
     
