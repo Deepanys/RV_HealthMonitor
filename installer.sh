@@ -22,7 +22,7 @@ cd /etc/
 
 echo "Working in Dir $(basename "$PWD")"
 
-if [ "$(basename "$PWD")" == "etc" ]; then
+if ["$(basename "$PWD")" == "etc"]; then
     echo "Starting installation.."
     curl -OL $repo
     echo "Cloning completed"
