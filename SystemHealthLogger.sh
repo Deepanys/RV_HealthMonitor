@@ -39,7 +39,7 @@ fi
 echo "SysLog Started"
 
 
-echo "                        |----SOC----|----PMIC----|----ARMFRQ----|----CORE ( V )----|----SDRAM ( V )----| ">$dir/$FileName
+echo "                       |----SOC----|----PMIC-----|------ARMFRQ-------|----CORE ( V )----|----SDRAM ( V )----| ">$dir/$FileName
 while true
 do
     echo "$(date +'%Y:%m:%d:%T') :: $(vcgencmd measure_temp) | $(vcgencmd measure_temp pmic) | $(vcgencmd measure_clock arm) | $(vcgencmd measure_volts core) |  $(vcgencmd measure_volts sdram_c) ">>$dir/$FileName
